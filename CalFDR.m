@@ -31,6 +31,8 @@ significantTransients(rasterNotSig) = 0;
 figure
 imagesc(significantTransients')
 
-%save('_FirstDerivRaster','significantTransients')  
+%save('_FDR','significantTransients')  
 %insert filename and uncomment above to save
-
+%Re-run ProcessFluorescenceTraces.m, this time choosing the 'Import Data' option for detecting significant transients,
+%and select the '_FDR' file just saved. The red portions of the traces should now be restricted to the rising portions
+%of the transients. The significance threshold for noise subtraction (line 20) may need to be adjusted for your data.
